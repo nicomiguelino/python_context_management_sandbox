@@ -1,5 +1,7 @@
 import os
 
+from decorators import example
+
 
 class DummyContext:
     def __init__(self, message="Lorem ipsum dolor sit amet..."):
@@ -24,6 +26,7 @@ class File:
         self.file_obj.close()
 
 
+@example.title(name="example_02")
 def run():
     """Creating your own context manager via __enter__ and __exit methods"""
 

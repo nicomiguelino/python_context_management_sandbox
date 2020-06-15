@@ -1,6 +1,9 @@
 from contextlib import contextmanager
 import os
 
+from decorators import example
+
+
 @contextmanager
 def create_dummy_context(message='Lorem ipsum dolor sit amet...'):
     try:
@@ -8,6 +11,7 @@ def create_dummy_context(message='Lorem ipsum dolor sit amet...'):
         yield message
     finally:
         print("Called __exit__ equivalent")
+
 
 @contextmanager
 def open_file(file_path, method):
@@ -18,6 +22,7 @@ def open_file(file_path, method):
         file.close()
 
 
+@example.title(name="example_03")
 def run():
     """Implementing a context manager as a generator"""
 
