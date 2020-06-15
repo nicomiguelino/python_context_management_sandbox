@@ -28,7 +28,7 @@ class File:
 
 @example.title(name="example_02")
 def run():
-    """Creating your own context manager via __enter__ and __exit methods"""
+    """Creating your own context manager via __enter__ and __exit__ methods"""
 
     with DummyContext() as context_object:
         print(f'context_object: { context_object }')
